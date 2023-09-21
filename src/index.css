@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -67,6 +68,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+:root {
+  font-family: 'Work Sans', sans-serif;
+}
 body {
   margin: 0;
 }

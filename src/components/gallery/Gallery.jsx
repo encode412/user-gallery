@@ -1,6 +1,6 @@
 import { useState } from "react";
 import UploadForm from "../UploadForm";
-import Hero from "../Hero";
+import Header from "../Header";
 import GalleryGrid from "../GalleryGrid";
 import Modal from "../Modal";
 import Search from "../Search";
@@ -9,8 +9,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   return (
     <>
-      <Hero />
-      {/* <Search /> */}
+      <Header />      
       <UploadForm />
       <GalleryGrid setSelectedImage={setSelectedImage} />
       {selectedImage && (
