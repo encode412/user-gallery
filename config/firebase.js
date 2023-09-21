@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -9,13 +10,13 @@ import { getFirestore, serverTimestamp } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyABx0N3Y8jHFKDol8QKJRLupcAGFhNY9q0",
-  authDomain: "social-app-59913.firebaseapp.com",
-  projectId: "social-app-59913",
-  storageBucket: "social-app-59913.appspot.com",
-  messagingSenderId: "686845072468",
-  appId: "1:686845072468:web:268774c3e0cdee265049c1",
-  measurementId: "G-S70TDBR0TW",
+  apiKey: process.env.REACT_APP_DEV_API_KEY,
+  authDomain: process.env.REACT_APP_DEV_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_DEV_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_DEV_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_DEV_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_DEV_APP_ID,
+  measurementId: process.env.REACT_APP_DEV_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
