@@ -1,8 +1,10 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import { build } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
+  
   const env = loadEnv(mode, process.cwd(), '');
   return {
     define: {
@@ -12,8 +14,13 @@ export default defineConfig(({ mode }) => {
       'process.env.REACT_APP_DEV_STORAGE_BUCKET': JSON.stringify(env.REACT_APP_DEV_STORAGE_BUCKET),
       'process.env.REACT_APP_DEV_MESSAGING_SENDER_ID': JSON.stringify(env.REACT_APP_DEV_MESSAGING_SENDER_ID),
       'process.env.REACT_APP_DEV_APP_ID': JSON.stringify(env.REACT_APP_DEV_APP_ID),
-      'process.env.REACT_APP_DEV_MEASUREMENT_ID': JSON.stringify(env.REACT_APP_DEV_MEASUREMENT_ID)
+      'process.env.REACT_APP_DEV_MEASUREMENT_ID': JSON.stringify(env.REACT_APP_DEV_MEASUREMENT_ID),
+      'process.env.BASE_URL': JSON.stringify(env.BASE_URL)
     },
-    plugins: [react()],
+    plugins: [
+      react()
+    ],
+    base: '/',
   }
+  // ${process.env.BASE_URL}
 })
