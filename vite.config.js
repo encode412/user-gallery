@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
       react()
     ],
     root: './',  
-    publicDir: 'public',    
+    publicDir: '/',    
     build: {
       outDir: 'dist',
     }
