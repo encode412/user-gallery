@@ -50,15 +50,26 @@ const UploadForm = () => {
   };
   const changeHandler = (e) => {
     let selected = e.target.files[0];
+     if (ref.current.value !== "") {
+        setError(null);
+        if (selected && type.includes(selected.type)) {
+          setError(null);
+          setFile(selected);
+          ref.current.value = "";
+        }
+      }
+      if (ref.current.value === "") {
+        setError("Please add a tag for your image");
+      }
 
-    if (selected && type.includes(selected.type)) {
-      setFile(selected);
-      setError("");
-      setTag("");
-    } else {
-      setFile(null);
-      setError("Please select an image file type: jpg or png");
-    }
+    // if (selected && type.includes(selected.type)) {
+    //   setFile(selected);
+    //   setError("");
+    //   setTag("");
+    // } else {
+    //   setFile(null);
+    //   setError("Please select an image file type: jpg or png");
+    // }
   };
 
   return (
@@ -71,10 +82,10 @@ const UploadForm = () => {
           placeholder='Enter a tag for your image'
         />
         <DropBox onDrop={onDrop} />
-        {/* <label className='text-center'>
+        <label className='text-center'>
           <input type='file' onChange={changeHandler} hidden />
           <span>+</span>
-        </label> */}
+        </label>
         <div className='output'>
           {error && <div className='error'>{error}</div>}
           {file && <div>Uploading: {file.name}</div>}

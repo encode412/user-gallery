@@ -97,9 +97,9 @@ function DropBox({ error, onDrop }) {
           
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here</p>
-          <Button type="B" className="btn" onClick={open}>
+          {/* <Button type="B" className="btn" onClick={open}>
             Click to select file
-          </Button>
+          </Button> */}
         </Container>
       </section>
       <aside>
