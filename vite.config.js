@@ -15,13 +15,13 @@ export default defineConfig(({ mode }) => {
       'process.env.REACT_APP_DEV_MESSAGING_SENDER_ID': JSON.stringify(env.REACT_APP_DEV_MESSAGING_SENDER_ID),
       'process.env.REACT_APP_DEV_APP_ID': JSON.stringify(env.REACT_APP_DEV_APP_ID),
       'process.env.REACT_APP_DEV_MEASUREMENT_ID': JSON.stringify(env.REACT_APP_DEV_MEASUREMENT_ID),
-      'process.env.BASE_URL': JSON.stringify(env.BASE_URL)
+      'process.env.BASE_URL': JSON.stringify(env.BASE_URL),
+      'process.env.REACT_APP_DEV_DATABASE_URL': JSON.stringify(env.REACT_APP_DEV_DATABASE_URL)
     },
     plugins: [
       react()
     ],
-    root: './',  
-    publicDir: '/',    
+    root: './',         
     build: {
       outDir: 'dist',
     }
