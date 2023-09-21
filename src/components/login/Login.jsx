@@ -32,8 +32,9 @@ const Login = () => {
     <div className='login-container'>
       <div className='login-container_content'>
         <h2>Sign In</h2>
-        <span>initiating splinter sequence...</span>
-        <div>
+        {/* <span>initiating splinter sequence...</span> */}
+        <div className='login-container_content_details'>
+        <div className='login-container_content_details_input'>
           <label htmlFor='email'>Email</label>
           <input
             id='email'
@@ -43,7 +44,7 @@ const Login = () => {
           />
         </div>
 
-        <div>
+        <div className='login-container_content_details_input'>
           <label htmlFor='email'>Password</label>
           <input
             id='password'
@@ -52,10 +53,11 @@ const Login = () => {
             placeholder='Enter your password'
           />
         </div>
-        <div>
+        </div>
+        <div className='login-container_content_button'>
           <button onClick={signIn}>Sign In</button>
         </div>
-        {error}
+        <span className='error'>{error}</span>
       </div>
     </div>
   );

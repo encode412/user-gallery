@@ -30,7 +30,7 @@ const UploadForm = () => {
         }
       }
       if (ref.current.value === "") {
-        setError("Please add tag");
+        setError("Please add a tag for your image");
       }
       // else {
       //   setFile(null);
@@ -66,8 +66,9 @@ const UploadForm = () => {
       <form className='form-container' action='/'>
         <input
           ref={ref}
+          className='tag-input'
           onChange={handleTagChange}
-          placeholder='enter a tag for your image'
+          placeholder='Enter a tag for your image'
         />
         <DropBox onDrop={onDrop} />
         {/* <label className='text-center'>
@@ -76,8 +77,8 @@ const UploadForm = () => {
         </label> */}
         <div className='output'>
           {error && <div className='error'>{error}</div>}
-          {file && <div>{file.name}</div>}
-          {tag && <div>{tag}</div>}
+          {file && <div>Uploading: {file.name}</div>}
+          {tag && <div>Tag:  {tag}</div>}
           {file && (
             <ProgressBar
               tag={tag}
@@ -120,6 +121,20 @@ const UploadForm = () => {
           label:hover {
             background: var(--primary);
             color: white;
+          }
+          .tag-input {
+            padding: 0.8rem;
+            width: 50%;
+            font-size: .8rem;
+            border-radius: 5px;
+            border: none;
+          }
+          input:focus {
+            outline: 0;
+            border: 1px solid #0099cc;
+          }
+          .error {
+            color: #EA4C89;
           }
 
           .text-center {

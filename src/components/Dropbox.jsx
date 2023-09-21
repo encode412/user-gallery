@@ -17,12 +17,13 @@ const getColor = (props) => {
 };
 
 const Container = styled.div`
+  margin-top: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  border-width: 2px;
+  border-width: 5px;
   border-radius: 10px;
   border-color: ${(props) => getColor(props)};
   border-style: dashed;
@@ -33,6 +34,32 @@ const Container = styled.div`
   outline: none;
   transition: border 0.24s ease-in-out;
 `;
+const Button = styled.button `
+background-color: #EA4C89;
+border-radius: 8px;
+border-style: none;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: 500;
+height: 40px;
+line-height: 20px;
+list-style: none;
+margin: 0;
+outline: none;
+padding: 10px 16px;
+position: relative;
+text-align: center;
+text-decoration: none;
+transition: color 100ms;
+vertical-align: baseline;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+`
 
 function DropBox({ error, onDrop }) {  
   const {
@@ -70,39 +97,16 @@ function DropBox({ error, onDrop }) {
           
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here</p>
-          <button type="button" className="btn" onClick={open}>
+          <Button type="B" className="btn" onClick={open}>
             Click to select file
-          </button>
+          </Button>
         </Container>
       </section>
       <aside>
         <h4>List</h4>
         <p>{lists}</p>
       </aside>
-      {/* <style jsx>
-        {`
-        .dropbox {
-         flex: 1;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 40px;
-         border-width: 2px;
-         border-radius: 10px;
-         border-color: ${(props) => getColor(props)};
-         border-style: dashed;
-         background-color: #fafafa; 
-         color: black;
-         font-weight: bold;
-         font-size: 1.4rem;
-         outline: none;
-         transition: border 0.24s ease-in-out;
-        }
-        
-        `}
-
-        
-      </style> */}
+     
     </>
   );
 }

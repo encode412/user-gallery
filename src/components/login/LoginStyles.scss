@@ -6,7 +6,14 @@
   height: 100vh;
 
   &_content {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     margin: 0;
+    padding: 4.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,5 +22,72 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    h2 {
+      color: #eee;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    &_details {
+      margin: 1.5rem auto;
+      &_input {
+        padding: 1rem;
+        label {
+          font-size: 1.2rem;
+          
+
+      }
+      input {
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        padding: .5rem;
+       margin-right: auto;
+
+      }
+    }
   }
+  &_button {
+      /* CSS */
+button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus {
+  background-color: #F082AC;
+  cursor: pointer;
+}
+    
+
+  }
+  .error {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: red;
+  }
+}
 }

@@ -54,9 +54,10 @@ const GalleryGrid = ({ setSelectedImage }) => {
       <style jsx>
         {`
           .image-container-grid {
+            padding: 4rem;
             margin: 20px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 40px;
           }
           .img-wrap {
